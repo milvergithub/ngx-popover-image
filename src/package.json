@@ -1,0 +1,28 @@
+{
+  "name": "ngx-popover-image",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milvergithub/ngx-popover-image"
+  },
+  "author": {
+    "name": "Milver Flores Acevedo",
+    "email": "mfflowg@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milvergithub/ngx-popover-image/issues"
+  },
+  "main": "ngx-popover-image.umd.js",
+  "module": "ngx-popover-image.js",
+  "jsnext:main": "ngx-popover-image.js",
+  "typings": "ngx-popover-image.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
