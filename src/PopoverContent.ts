@@ -65,6 +65,14 @@ import {PopoverDirective} from './popover';
 }
 .popover-image-content {
     padding: 0px !important;
+}
+.popover-image-right:before {
+    content: "";
+    position: absolute;
+    order-color: transparent #999;
+    border-width: 13px 11px 13px 0;
+    top: 35%;
+    left: -13px;
 }        
 `]
 })

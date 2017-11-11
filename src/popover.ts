@@ -13,8 +13,8 @@ import {
 import {PopoverContent} from './PopoverContent';
 
 @Directive({
-    selector: '[popoverLucy]',
-    exportAs: 'popoverLucy'
+    selector: '[popoverImage]',
+    exportAs: 'popoverImage'
 })
 export class PopoverDirective implements OnChanges {
 
@@ -29,7 +29,7 @@ export class PopoverDirective implements OnChanges {
     // Inputs / Outputs
     // -------------------------------------------------------------------------
 
-    @Input('popoverLucy') content: string | PopoverContent;
+    @Input('popoverImage') content: string | PopoverContent;
 
     @Input() popoverDisabled: boolean;
 

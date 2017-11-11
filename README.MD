@@ -24,7 +24,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
+// Import your library on main module `PopoverLucyModule.forRoot()` and  `PopoverLucyModule` child module
 import { PopoverLucyModule } from 'ngx-popover-image';
 
 @NgModule({
@@ -35,7 +35,7 @@ import { PopoverLucyModule } from 'ngx-popover-image';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    PopoverLucyModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -47,10 +47,15 @@ Once your library is imported, you can use its components, directives and pipes 
 
 ```xml
 <!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+<popover-content #myPopover 
+                 placement="auto"
+                 [image]="image"
+                 [animation]="true"
+                 [closeOnClickOutside]="false" >
+  Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+  Pellentesque ornare sem lacinia quam venenatis vestibulum.
+</popover-content>
+<button [popoverImage]="myPopover" class="btn btn-success">open popover</button>
 ```
 
 ## Development
