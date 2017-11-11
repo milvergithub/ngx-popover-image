@@ -1,5 +1,5 @@
 # ngx-popover-image
-
+![angular 4 popover-image](https://raw.githubusercontent.com/milvergithub/ngx-popover-image/master/resource/demo.png)
 ## Installation
 
 To install this library, run:
