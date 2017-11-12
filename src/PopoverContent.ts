@@ -1,91 +1,103 @@
-import {Component, Input, AfterViewInit, ElementRef, ChangeDetectorRef, OnDestroy, ViewChild, EventEmitter, Renderer } from '@angular/core';
+import {
+    AfterViewInit,
+    ChangeDetectorRef,
+    Component,
+    ElementRef,
+    EventEmitter,
+    HostListener,
+    Input,
+    OnDestroy,
+    Renderer,
+    ViewChild
+} from '@angular/core';
 import {PopoverDirective} from './popover';
 
 @Component({
     selector: 'popover-content',
     template: `
-<div #popoverDiv class="popover {{ effectivePlacement }} popover-image"
-     [style.top]="top + 'px'"
-     [style.left]="left + 'px'"
-     [class.in]="isIn"
-     [class.fade]="animation"
-     style="display: block"
-     role="popover">
-    <div [hidden]="!closeOnMouseOutside" class="virtual-area"></div>
-    <div class="arrow"></div> 
-    <h3 class="popover-title" [hidden]="!title">{{ title }}</h3>
-    <div class="popover-content popover-image-content">
-        <div class="popover-image-left col-xs-4">
-            <img src="{{image}}" 
-                 class="img-popover-open" alt="image popover">
+        <div #popoverDiv class="popover {{ effectivePlacement }} popover-image"
+             [style.top]="top + 'px'"
+             [style.left]="left + 'px'"
+             [class.in]="isIn"
+             [class.fade]="animation"
+             style="display: block"
+             role="popover">
+            <div [hidden]="!closeOnMouseOutside" class="virtual-area"></div>
+            <div class="arrow"></div>
+            <h3 class="popover-title" [hidden]="!title">{{ title }}</h3>
+            <div class="popover-content popover-image-content">
+                <div class="popover-image-left col-xs-4">
+                    <img src="{{image}}"
+                         class="img-popover-open" alt="image popover">
+                </div>
+                <div class="col-xs-8 popover-image-right">
+                    <ng-content></ng-content>
+                    {{ content }}
+                </div>
+            </div>
         </div>
-        <div class="col-xs-8 popover-image-right"> 
-            <ng-content></ng-content>
-            {{ content }}
-        </div>
-    </div> 
-</div>
-`,
+    `,
     styles: [`
-.popover .virtual-area {
-    height: 11px;
-    width: 100%;
-    position: absolute;
-}
-.popover.top .virtual-area {
-    bottom: -11px; 
-}
-.popover.bottom .virtual-area {
-    top: -11px; 
-}
-.popover.left .virtual-area {
-    right: -11px; 
-}
-.popover.right .virtual-area {
-    left: -11px; 
-}
+        .popover .virtual-area {
+            height: 11px;
+            width: 100%;
+            position: absolute;
+        }
 
-.img-popover-open {
-    width: 100%;
-    height: 100%;
-    padding-top: 15%;
-}
-.popover-image {
-    background-color: transparent !important;
-    border: 0px solid #cecece !important;
-}
-.popover-image-left{
-    padding: 0px;
-}        
-.popover-image-right{
-    background: #fff;
-    border: 1px solid #cecece;
-    border-radius: 15px;
-    padding: 10px;
-}
-.popover-image-content {
-    padding: 0px !important;
-}
-.popover-image-right:before {
-    content: "";
-    position: absolute;
-    order-color: transparent #999;
-    border-width: 13px 11px 13px 0;
-    top: 35%;
-    left: -13px;
-}        
-`]
+        .popover.top .virtual-area {
+            bottom: -11px;
+        }
+
+        .popover.bottom .virtual-area {
+            top: -11px;
+        }
+
+        .popover.left .virtual-area {
+            right: -11px;
+        }
+
+        .popover.right .virtual-area {
+            left: -11px;
+        }
+
+        .img-popover-open {
+            width: 100%;
+            height: 100%;
+            padding-top: 15%;
+        }
+
+        .popover-image {
+            background-color: transparent !important;
+            border: 0px solid #cecece !important;
+        }
+
+        .popover-image-left {
+            padding: 0px;
+        }
+
+        .popover-image-right {
+            background: #fff;
+            border: 1.5px solid #dad8d8;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 2px 2px 10px #dad8d8;
+        }
+
+        .popover-image-content {
+            padding: 0px !important;
+        }
+    `]
 })
 export class PopoverContent implements AfterViewInit, OnDestroy {
 
     // @Input()
     // hostElement: HTMLElement;
     @Input() image: string;
-
+    @Input() autoposition = false;
     @Input() content: string;
 
     @Input()
-    placement: 'top'|'bottom'|'left'|'right'|'auto'|'auto top'|'auto bottom'|'auto left'|'auto right' = 'bottom';
+    placement: 'top' | 'bottom' | 'left' | 'right' | 'auto' | 'auto top' | 'auto bottom' | 'auto left' | 'auto right' = 'bottom';
 
     @Input() title: string;
 
@@ -109,10 +121,25 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     isIn = false;
     displayType = 'none';
     effectivePlacement: string;
-
+// -------------------------------------------------------------------------
+    // Lifecycle callbacks
+    // -------------------------------------------------------------------------
+    listenClickFunc: any;
+    listenMouseFunc: any;
+    // -------------------------------------------------------------------------
     // -------------------------------------------------------------------------
     // Anonymous
     // -------------------------------------------------------------------------
+    //
+    @HostListener('document:click', ['$event'])
+    openPopoverClickEvent($event) {
+        if (this.autoposition) {
+            this.displayType = 'block';
+            this.top = $event.clientY;
+            this.left = $event.clientX;
+            this.isIn = true;
+        }
+    }
 
     /**
      * Closes dropdown if user clicks outside of this directive.
@@ -128,21 +155,13 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
         this.hide();
         this.onCloseFromOutside.emit(undefined);
     }
-
-
-    // -------------------------------------------------------------------------
-    // Lifecycle callbacks
-    // -------------------------------------------------------------------------
-    listenClickFunc: any;
-    listenMouseFunc: any;
-    // -------------------------------------------------------------------------
     // Constructor
     // -------------------------------------------------------------------------
-
     constructor(protected element: ElementRef,
                 protected cdr: ChangeDetectorRef,
                 protected renderer: Renderer) {
     }
+
     ngAfterViewInit(): void {
         if (this.closeOnClickOutside) {
             this.listenClickFunc = this.renderer.listenGlobal('document', 'mousedown', (event: any) => this.onDocumentMouseDown(event));
@@ -266,7 +285,7 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     }
 
     protected position(nativeEl: HTMLElement): { width: number, height: number, top: number, left: number } {
-        let offsetParentBCR = { top: 0, left: 0 };
+        let offsetParentBCR = {top: 0, left: 0};
         const elBCR = this.offset(nativeEl);
         const offsetParentEl = this.parentOffsetEl(nativeEl);
         if (offsetParentEl !== window.document) {
