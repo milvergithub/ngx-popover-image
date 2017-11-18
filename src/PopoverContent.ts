@@ -174,9 +174,6 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
         this.thisMouseOver = false;
     }
     showPopover() {
-        if (!this.popover || !this.popover.getElement()) {
-            return;
-        }
         this.isOpened = true;
         this.isIn = true;
         this.displayType = 'block';
