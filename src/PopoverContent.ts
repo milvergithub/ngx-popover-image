@@ -25,12 +25,12 @@ import {PopoverDirective} from './popover';
             <div [hidden]="!closeOnMouseOutside" class="virtual-area"></div>
             <div class="arrow"></div>
             <h3 class="popover-title" [hidden]="!title">{{ title }}</h3>
-            <div class="popover-content popover-image-content">
+            <div class="popover-content popover-image-content ">
                 <div class="popover-image-left col-xs-4">
                     <img src="{{image}}"
-                         class="img-popover-open" alt="image popover">
+                         class="img-popover-open " alt="image popover">
                 </div>
-                <div class="col-xs-8 popover-image-right">
+                <div class="col-xs-8 popover-image-right ">
                     <ng-content></ng-content>
                     {{ content }}
                 </div>
