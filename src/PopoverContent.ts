@@ -178,13 +178,12 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     }
 
     showPopover() {
+        console.log('LOG', this.topParam, this.leftParam);
         const vm = this;
-        setTimeout(function () {
-            vm.displayType = 'block';
-            vm.isIn = true;
-            vm.top = this.topParam;
-            vm.left = this.leftParam;
-        }, 20);
+        vm.displayType = 'block';
+        vm.isIn = true;
+        vm.top = this.topParam;
+        vm.left = this.leftParam;
         setTimeout(function () {
             vm.isOpened = true;
         }, 50);
