@@ -98,8 +98,8 @@ import {PopoverDirective} from './popover';
         .popover-image-right:after {
             content: "";
             position: absolute;
-            top: 25%;
-            left: -50px;
+            top: 20%;
+            left: -40px;
             width: 15px;
             height: 15px;
             border: 1.5px solid #dad8d8;
@@ -145,6 +145,7 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     isIn = false;
     displayType = 'none';
     effectivePlacement: string;
+    thisMouseOver = false;
 // -------------------------------------------------------------------------
     // Lifecycle callbacks
     // -------------------------------------------------------------------------
@@ -157,16 +158,26 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     //
     @HostListener('window:click', ['$event'])
     openPopoverClickEvent($event) {
-        if (this.autoposition) {
+        if (this.autoposition && !this.thisMouseOver) {
             this.top = $event.clientY;
             this.left = $event.clientX;
-            this.isIn = true;
+            this.displayType = 'none';
         }
+    }
+    @HostListener('mouseover')
+    onMouseOver() {
+        this.thisMouseOver = true;
+    }
+
+    @HostListener('mouseout')
+    onMouseOut() {
+        this.thisMouseOver = false;
     }
     showPopover() {
         if (!this.popover || !this.popover.getElement()) {
             return;
         }
+        this.isIn = true;
         this.displayType = 'block';
     }
 
