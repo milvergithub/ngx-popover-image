@@ -83,6 +83,30 @@ import {PopoverDirective} from './popover';
             box-shadow: 2px 2px 10px #dad8d8;
         }
 
+        .popover-image-right:before {
+            content: "";
+            position: absolute;
+            top: 10%;
+            left: -27px;
+            width: 25px;
+            height: 25px;
+            border: 1.5px solid #dad8d8;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            border-radius: 25px;
+        }
+        .popover-image-right:after {
+            content: "";
+            position: absolute;
+            top: 25%;
+            left: -50px;
+            width: 15px;
+            height: 15px;
+            border: 1.5px solid #dad8d8;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+        }
         .popover-image-content {
             padding: 0px !important;
         }
@@ -131,14 +155,19 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     // Anonymous
     // -------------------------------------------------------------------------
     //
-    @HostListener('document:click', ['$event'])
+    @HostListener('window:click', ['$event'])
     openPopoverClickEvent($event) {
         if (this.autoposition) {
-            this.displayType = 'block';
             this.top = $event.clientY;
             this.left = $event.clientX;
             this.isIn = true;
         }
+    }
+    showPopover() {
+        if (!this.popover || !this.popover.getElement()) {
+            return;
+        }
+        this.displayType = 'block';
     }
 
     /**
