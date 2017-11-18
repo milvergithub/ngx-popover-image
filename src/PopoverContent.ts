@@ -20,7 +20,7 @@ import {PopoverDirective} from './popover';
              [style.left]="left + 'px'"
              [class.in]="isIn"
              [class.fade]="animation"
-             style="display: block"
+             [style.display]="displayType"
              role="popover">
             <div [hidden]="!closeOnMouseOutside" class="virtual-area"></div>
             <div class="arrow"></div>
@@ -161,6 +161,7 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
         if (this.autoposition && !this.thisMouseOver) {
             this.top = $event.clientY;
             this.left = $event.clientX;
+            this.hide();
             this.displayType = 'none';
         }
     }
