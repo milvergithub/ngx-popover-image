@@ -163,9 +163,6 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
             this.top = $event.clientY;
             this.left = $event.clientX;
             this.displayType = 'none';
-        } else {
-            this.top = -10000;
-            this.left = -10000;
         }
     }
     @HostListener('mouseover')
