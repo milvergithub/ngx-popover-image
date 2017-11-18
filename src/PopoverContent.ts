@@ -11,7 +11,6 @@ import {
     ViewChild
 } from '@angular/core';
 import {PopoverDirective} from './popover';
-import set = Reflect.set;
 
 @Component({
     selector: 'popover-content',
@@ -184,14 +183,10 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
         setTimeout(function () {
             vm.displayType = 'block';
             vm.isIn = true;
-            vm.top = this.topParam;
-            vm.left = this.leftParam;
-            console.log('AAAAAAA');
-        }, 50);
-        setTimeout(function () {
             vm.isOpened = true;
-            console.log('BBBBBBB');
-        }, 150);
+        }, 200);
+        vm.top = this.topParam;
+        vm.left = this.leftParam;
     }
 
     closePopover() {
