@@ -161,6 +161,7 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
         if (this.autoposition && !this.thisMouseOver) {
             this.top = $event.clientY;
             this.left = $event.clientX;
+            this.displayType = 'none';
         }
     }
     @HostListener('mouseover')
@@ -173,6 +174,7 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
         this.thisMouseOver = false;
     }
     showPopover() {
+        this.displayType = 'block';
         this.isIn = true;
     }
 
