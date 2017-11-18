@@ -184,8 +184,10 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
             vm.isIn = true;
             vm.top = this.topParam;
             vm.left = this.leftParam;
+        }, 20);
+        setTimeout(function () {
             vm.isOpened = true;
-        }, 10);
+        }, 50);
     }
 
     closePopover() {
