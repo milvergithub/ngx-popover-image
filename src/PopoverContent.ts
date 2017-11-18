@@ -142,6 +142,8 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     onCloseFromOutside = new EventEmitter();
     top: number = -10000;
     left: number = -10000;
+    topParam = -10000;
+    leftParam = -10000;
     isIn = false;
     displayType = 'none';
     effectivePlacement: string;
@@ -160,8 +162,8 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     @HostListener('window:click', ['$event'])
     openPopoverClickEvent($event) {
         if (this.autoposition && !this.thisMouseOver && !this.isOpened) {
-            this.top = $event.clientY;
-            this.left = $event.clientX;
+            this.topParam = $event.clientY;
+            this.leftParam = $event.clientX;
             this.displayType = 'none';
         }
     }
@@ -178,6 +180,12 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     showPopover() {
         this.displayType = 'block';
         this.isIn = true;
+        this.top = this.topParam;
+        this.left = this.leftParam;
+        const vm = this;
+        setTimeout(function () {
+            vm.isOpened = true;
+        }, 100);
     }
 
     closePopover() {
