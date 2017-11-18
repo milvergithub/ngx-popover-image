@@ -20,7 +20,7 @@ import {PopoverDirective} from './popover';
              [style.left]="left + 'px'"
              [class.in]="isIn"
              [class.fade]="animation"
-             [style.display]="displayType"
+             style="display: block"
              role="popover">
             <div [hidden]="!closeOnMouseOutside" class="virtual-area"></div>
             <div class="arrow"></div>
@@ -146,6 +146,7 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     displayType = 'none';
     effectivePlacement: string;
     thisMouseOver = false;
+    isOpened = false;
 // -------------------------------------------------------------------------
     // Lifecycle callbacks
     // -------------------------------------------------------------------------
@@ -158,10 +159,9 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     //
     @HostListener('window:click', ['$event'])
     openPopoverClickEvent($event) {
-        if (this.autoposition && !this.thisMouseOver) {
+        if (this.autoposition && !this.thisMouseOver && !this.isOpened) {
             this.top = $event.clientY;
             this.left = $event.clientX;
-            this.displayType = 'none';
         }
     }
     @HostListener('mouseover')
@@ -177,6 +177,7 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
         if (!this.popover || !this.popover.getElement()) {
             return;
         }
+        this.isOpened = true;
         this.isIn = true;
         this.displayType = 'block';
     }
@@ -242,6 +243,7 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
         this.top = -10000;
         this.left = -10000;
         this.isIn = true;
+        this.isOpened = false;
         this.popover.hide();
     }
 
