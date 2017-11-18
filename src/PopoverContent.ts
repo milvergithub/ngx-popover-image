@@ -146,7 +146,6 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     displayType = 'none';
     effectivePlacement: string;
     thisMouseOver = false;
-    isOpened = false;
 // -------------------------------------------------------------------------
     // Lifecycle callbacks
     // -------------------------------------------------------------------------
@@ -159,7 +158,7 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     //
     @HostListener('window:click', ['$event'])
     openPopoverClickEvent($event) {
-        if (this.autoposition && !this.thisMouseOver && !this.isOpened) {
+        if (this.autoposition && !this.thisMouseOver) {
             this.top = $event.clientY;
             this.left = $event.clientX;
         }
@@ -174,9 +173,7 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
         this.thisMouseOver = false;
     }
     showPopover() {
-        this.isOpened = true;
         this.isIn = true;
-        this.displayType = 'block';
     }
 
     /**
