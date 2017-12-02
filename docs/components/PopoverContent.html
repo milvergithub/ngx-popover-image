@@ -1,0 +1,2564 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ngx-popover-image</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ngx-popover-image</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">ngx-popover-image</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../"
+                                        
+                                        
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/AppModule.html" >AppModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/PopoverLucyModule.html" >PopoverLucyModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NgxPopoverImageComponent.html" >NgxPopoverImageComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/PopoverContent.html"  data-type="entity-link" class="active" >PopoverContent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-directives-links"
+                            >
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="../directives/PopoverDirective.html" >PopoverDirective</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
+                            <span class="fa fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="../injectables/NgxPopoverImageService.html" >NgxPopoverImageService</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">ngx-popover-image</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../"
+                                               
+                                               
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/AppModule.html" >AppModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/PopoverLucyModule.html" >PopoverLucyModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NgxPopoverImageComponent.html" >NgxPopoverImageComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/PopoverContent.html"  data-type="entity-link" class="active" >PopoverContent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#directives-links"
+                   >
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="../directives/PopoverDirective.html" >PopoverDirective</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
+                                   <span class="fa fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="../injectables/NgxPopoverImageService.html" >NgxPopoverImageService</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>PopoverContent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+
+    <li>
+        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/PopoverContent.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>popover-content</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>
+        .popover .virtual-area {
+            height: 11px;
+            width: 100%;
+            position: absolute;
+        }
+
+        .popover.top .virtual-area {
+            bottom: -11px;
+        }
+
+        .popover.bottom .virtual-area {
+            top: -11px;
+        }
+
+        .popover.left .virtual-area {
+            right: -11px;
+        }
+
+        .popover.right .virtual-area {
+            left: -11px;
+        }
+
+        .img-popover-open {
+            width: 100%;
+            height: 100%;
+            padding-top: 15%;
+        }
+
+        .popover-image {
+            background-color: transparent !important;
+            border: 0px solid #cecece !important;
+        }
+
+        .popover-image-left {
+            padding: 0px;
+        }
+
+        .popover-image-right {
+            background: #fff;
+            border: 1.5px solid #dad8d8;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 2px 2px 10px #dad8d8;
+        }
+
+        .popover-image-right:before {
+            content: &quot;&quot;;
+            position: absolute;
+            top: 10%;
+            left: -27px;
+            width: 25px;
+            height: 25px;
+            border: 1.5px solid #dad8d8;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            border-radius: 25px;
+        }
+        .popover-image-right:after {
+            content: &quot;&quot;;
+            position: absolute;
+            top: 20%;
+            left: -40px;
+            width: 15px;
+            height: 15px;
+            border: 1.5px solid #dad8d8;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+        }
+        .popover-image-content {
+            padding: 0px !important;
+        }
+    </code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">template</td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;div #popoverDiv class&#x3D;&quot;popover {{ effectivePlacement }} popover-image&quot;
+     [style.top]&#x3D;&quot;top + &#x27;px&#x27;&quot;
+     [style.left]&#x3D;&quot;left + &#x27;px&#x27;&quot;
+     [class.in]&#x3D;&quot;isIn&quot;
+     [class.fade]&#x3D;&quot;animation&quot;
+     style&#x3D;&quot;display: block&quot;
+     role&#x3D;&quot;popover&quot;&gt;
+    &lt;div [hidden]&#x3D;&quot;!closeOnMouseOutside&quot; class&#x3D;&quot;virtual-area&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;arrow&quot;&gt;&lt;/div&gt;
+    &lt;h3 class&#x3D;&quot;popover-title&quot; [hidden]&#x3D;&quot;!title&quot;&gt;{{ title }}&lt;/h3&gt;
+    &lt;div class&#x3D;&quot;popover-content popover-image-content &quot;&gt;
+        &lt;div class&#x3D;&quot;popover-image-left col-xs-4&quot;&gt;
+            &lt;img src&#x3D;&quot;{{image}}&quot;
+                 class&#x3D;&quot;img-popover-open &quot; alt&#x3D;&quot;image popover&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-xs-8 popover-image-right &quot;&gt;
+            &lt;ng-content&gt;&lt;/ng-content&gt;
+            {{ content }}
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#displayType">displayType</a>
+                            </li>
+                            <li>
+                                <a href="#effectivePlacement">effectivePlacement</a>
+                            </li>
+                            <li>
+                                <a href="#isIn">isIn</a>
+                            </li>
+                            <li>
+                                <a href="#isOpened">isOpened</a>
+                            </li>
+                            <li>
+                                <a href="#left">left</a>
+                            </li>
+                            <li>
+                                <a href="#leftParam">leftParam</a>
+                            </li>
+                            <li>
+                                <a href="#listenClickFunc">listenClickFunc</a>
+                            </li>
+                            <li>
+                                <a href="#listenMouseFunc">listenMouseFunc</a>
+                            </li>
+                            <li>
+                                <a href="#onCloseFromOutside">onCloseFromOutside</a>
+                            </li>
+                            <li>
+                                <a href="#onDocumentMouseDown">onDocumentMouseDown</a>
+                            </li>
+                            <li>
+                                <a href="#popover">popover</a>
+                            </li>
+                            <li>
+                                <a href="#popoverDiv">popoverDiv</a>
+                            </li>
+                            <li>
+                                <a href="#thisMouseOver">thisMouseOver</a>
+                            </li>
+                            <li>
+                                <a href="#top">top</a>
+                            </li>
+                            <li>
+                                <a href="#topParam">topParam</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#getEffectivePlacement">getEffectivePlacement</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#getStyle">getStyle</a>
+                            </li>
+                            <li>
+                                <a href="#hide">hide</a>
+                            </li>
+                            <li>
+                                <a href="#hideFromPopover">hideFromPopover</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#isStaticPositioned">isStaticPositioned</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#offset">offset</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#parentOffsetEl">parentOffsetEl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#position">position</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#positionElements">positionElements</a>
+                            </li>
+                            <li>
+                                <a href="#show">show</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#animation">animation</a>
+                            </li>
+                            <li>
+                                <a href="#autoposition">autoposition</a>
+                            </li>
+                            <li>
+                                <a href="#closeOnClickOutside">closeOnClickOutside</a>
+                            </li>
+                            <li>
+                                <a href="#closeOnMouseOutside">closeOnMouseOutside</a>
+                            </li>
+                            <li>
+                                <a href="#content">content</a>
+                            </li>
+                            <li>
+                                <a href="#image">image</a>
+                            </li>
+                            <li>
+                                <a href="#placement">placement</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>constructor(element: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, cdr: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, renderer: <a href="https://angular.io/api/core/Renderer" target="_blank">Renderer</a>)</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">src/PopoverContent.ts:174</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div>
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>element</td>
+                                                      <td>
+                                                                <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>cdr</td>
+                                                      <td>
+                                                                <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>renderer</td>
+                                                      <td>
+                                                                <code><a href="https://angular.io/api/core/Renderer" target="_blank" >Renderer</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        <h3 id="inputs">Inputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="animation"></a>
+                            <code>animation</code>
+                        </td>
+                        <td class="col-md-10">
+                            <p>
+                              <em>Default value: </em><code>true</code>
+                            </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">src/PopoverContent.ts:127</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="autoposition"></a>
+                            <code>autoposition</code>
+                        </td>
+                        <td class="col-md-10">
+                            <p>
+                              <em>Default value: </em><code>false</code>
+                            </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/PopoverContent.ts:119</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="closeOnClickOutside"></a>
+                            <code>closeOnClickOutside</code>
+                        </td>
+                        <td class="col-md-10">
+                            <p>
+                              <em>Default value: </em><code>false</code>
+                            </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/PopoverContent.ts:129</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="closeOnMouseOutside"></a>
+                            <code>closeOnMouseOutside</code>
+                        </td>
+                        <td class="col-md-10">
+                            <p>
+                              <em>Default value: </em><code>false</code>
+                            </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/PopoverContent.ts:131</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="content"></a>
+                            <code>content</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/PopoverContent.ts:120</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="image"></a>
+                            <code>image</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/PopoverContent.ts:118</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="placement"></a>
+                            <code>placement</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>&quot;top&quot; | &quot;bottom&quot; | &quot;left&quot; | &quot;right&quot; | &quot;auto&quot; | &quot;auto top&quot; | &quot;auto bottom&quot; | &quot;auto left&quot; | &quot;auto right&quot;</code>
+
+                              </p>
+                            <p>
+                              <em>Default value: </em><code>&#x27;bottom&#x27;</code>
+                            </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/PopoverContent.ts:123</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="title"></a>
+                            <code>title</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/PopoverContent.ts:125</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+    </section>
+
+
+
+
+    <section>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="getEffectivePlacement"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Protected</span>
+                                getEffectivePlacement
+                                </b>
+                                <a href="#getEffectivePlacement"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>getEffectivePlacement(placement: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, hostElement: HTMLElement, targetElement: HTMLElement)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="357" class="link-to-prism">src/PopoverContent.ts:357</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>placement</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>hostElement</td>
+                                                      <td>
+                                                              <code>HTMLElement</code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>targetElement</td>
+                                                      <td>
+                                                              <code>HTMLElement</code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="getStyle"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Protected</span>
+                                getStyle
+                                </b>
+                                <a href="#getStyle"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>getStyle(nativeEl: HTMLElement, cssProp: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="333" class="link-to-prism">src/PopoverContent.ts:333</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>nativeEl</td>
+                                                      <td>
+                                                              <code>HTMLElement</code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>cssProp</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="hide"></a>
+                            <span class="name">
+                                <b>
+                                hide
+                                </b>
+                                <a href="#hide"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>hide()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="218" class="link-to-prism">src/PopoverContent.ts:218</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="hideFromPopover"></a>
+                            <span class="name">
+                                <b>
+                                hideFromPopover
+                                </b>
+                                <a href="#hideFromPopover"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>hideFromPopover()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="225" class="link-to-prism">src/PopoverContent.ts:225</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="isStaticPositioned"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Protected</span>
+                                isStaticPositioned
+                                </b>
+                                <a href="#isStaticPositioned"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>isStaticPositioned(nativeEl: HTMLElement)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="345" class="link-to-prism">src/PopoverContent.ts:345</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>nativeEl</td>
+                                                      <td>
+                                                              <code>HTMLElement</code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngAfterViewInit"></a>
+                            <span class="name">
+                                <b>
+                                ngAfterViewInit
+                                </b>
+                                <a href="#ngAfterViewInit"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>ngAfterViewInit()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="182" class="link-to-prism">src/PopoverContent.ts:182</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngOnDestroy"></a>
+                            <span class="name">
+                                <b>
+                                ngOnDestroy
+                                </b>
+                                <a href="#ngOnDestroy"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>ngOnDestroy()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">src/PopoverContent.ts:193</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="offset"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Protected</span>
+                                offset
+                                </b>
+                                <a href="#offset"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>offset(nativeEl: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="323" class="link-to-prism">src/PopoverContent.ts:323</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>nativeEl</td>
+                                                      <td>
+                                                              <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>literal type</code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="parentOffsetEl"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Protected</span>
+                                parentOffsetEl
+                                </b>
+                                <a href="#parentOffsetEl"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>parentOffsetEl(nativeEl: HTMLElement)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="349" class="link-to-prism">src/PopoverContent.ts:349</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>nativeEl</td>
+                                                      <td>
+                                                              <code>HTMLElement</code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="position"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Protected</span>
+                                position
+                                </b>
+                                <a href="#position"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>position(nativeEl: HTMLElement)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="304" class="link-to-prism">src/PopoverContent.ts:304</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>nativeEl</td>
+                                                      <td>
+                                                              <code>HTMLElement</code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>literal type</code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="positionElements"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Protected</span>
+                                positionElements
+                                </b>
+                                <a href="#positionElements"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>positionElements(hostEl: HTMLElement, targetEl: HTMLElement, positionStr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, appendToBody: )</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="235" class="link-to-prism">src/PopoverContent.ts:235</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>hostEl</td>
+                                                      <td>
+                                                              <code>HTMLElement</code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>targetEl</td>
+                                                      <td>
+                                                              <code>HTMLElement</code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>positionStr</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>appendToBody</td>
+                                                      <td>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>literal type</code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="show"></a>
+                            <span class="name">
+                                <b>
+                                show
+                                </b>
+                                <a href="#show"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>show()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="206" class="link-to-prism">src/PopoverContent.ts:206</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        
+            <h3 id="inputs">
+                Properties
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="displayType"></a>
+                            <span class="name">
+                                <b>
+                                displayType
+                                </b>
+                                <a href="#displayType"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>displayType:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>&#x27;none&#x27;</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">src/PopoverContent.ts:147</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="effectivePlacement"></a>
+                            <span class="name">
+                                <b>
+                                effectivePlacement
+                                </b>
+                                <a href="#effectivePlacement"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>effectivePlacement:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">src/PopoverContent.ts:148</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="isIn"></a>
+                            <span class="name">
+                                <b>
+                                isIn
+                                </b>
+                                <a href="#isIn"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>isIn:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>false</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">src/PopoverContent.ts:146</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="isOpened"></a>
+                            <span class="name">
+                                <b>
+                                isOpened
+                                </b>
+                                <a href="#isOpened"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>isOpened:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>false</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">src/PopoverContent.ts:150</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="left"></a>
+                            <span class="name">
+                                <b>
+                                left
+                                </b>
+                                <a href="#left"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>left:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>-10000</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">src/PopoverContent.ts:143</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="leftParam"></a>
+                            <span class="name">
+                                <b>
+                                leftParam
+                                </b>
+                                <a href="#leftParam"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>leftParam:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>-10000</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/PopoverContent.ts:145</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="listenClickFunc"></a>
+                            <span class="name">
+                                <b>
+                                listenClickFunc
+                                </b>
+                                <a href="#listenClickFunc"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>listenClickFunc:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="154" class="link-to-prism">src/PopoverContent.ts:154</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="listenMouseFunc"></a>
+                            <span class="name">
+                                <b>
+                                listenMouseFunc
+                                </b>
+                                <a href="#listenMouseFunc"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>listenMouseFunc:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/PopoverContent.ts:155</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="onCloseFromOutside"></a>
+                            <span class="name">
+                                <b>
+                                onCloseFromOutside
+                                </b>
+                                <a href="#onCloseFromOutside"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>onCloseFromOutside:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>new EventEmitter()</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/PopoverContent.ts:141</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="onDocumentMouseDown"></a>
+                            <span class="name">
+                                <b>
+                                onDocumentMouseDown
+                                </b>
+                                <a href="#onDocumentMouseDown"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>onDocumentMouseDown:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>(event: any) &#x3D;&gt; {
+            const element &#x3D; this.element.nativeElement;
+            if (!element || !this.popover) {
+                return;
+            }
+            if (element.contains(event.target) || this.popover.getElement().contains(event.target)) {
+                return;
+            }
+            this.hide();
+            this.onCloseFromOutside.emit(undefined);
+        }</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">src/PopoverContent.ts:164</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Closes dropdown if user clicks outside of this directive.</p>
+    </div>
+                        </td>
+                    </tr>
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="popover"></a>
+                            <span class="name">
+                                <b>
+                                popover
+                                </b>
+                                <a href="#popover"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>popover:     <code>PopoverDirective</code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code>PopoverDirective</code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">src/PopoverContent.ts:140</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="popoverDiv"></a>
+                            <span class="name">
+                                <b>
+                                popoverDiv
+                                </b>
+                                <a href="#popoverDiv"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>popoverDiv:     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Decorators : </i><code>ViewChild</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/PopoverContent.ts:138</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="thisMouseOver"></a>
+                            <span class="name">
+                                <b>
+                                thisMouseOver
+                                </b>
+                                <a href="#thisMouseOver"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>thisMouseOver:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>false</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="149" class="link-to-prism">src/PopoverContent.ts:149</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="top"></a>
+                            <span class="name">
+                                <b>
+                                top
+                                </b>
+                                <a href="#top"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>top:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>-10000</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">src/PopoverContent.ts:142</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="topParam"></a>
+                            <span class="name">
+                                <b>
+                                topParam
+                                </b>
+                                <a href="#topParam"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>topParam:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>-10000</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">src/PopoverContent.ts:144</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+    </section>
+
+</div>
+
+
+    <div class="tab-pane fade tab-source-code" id="c-source">
+        <pre class="line-numbers"><code class="language-typescript">import {
+    AfterViewInit,
+    ChangeDetectorRef,
+    Component,
+    ElementRef,
+    EventEmitter,
+    Input,
+    OnDestroy,
+    Renderer,
+    ViewChild
+} from &#x27;@angular/core&#x27;;
+import {PopoverDirective} from &#x27;./popover&#x27;;
+
+@Component({
+    selector: &#x27;popover-content&#x27;,
+    template: &#x60;
+        &lt;div #popoverDiv class&#x3D;&quot;popover {{ effectivePlacement }} popover-image&quot;
+             [style.top]&#x3D;&quot;top + &#x27;px&#x27;&quot;
+             [style.left]&#x3D;&quot;left + &#x27;px&#x27;&quot;
+             [class.in]&#x3D;&quot;isIn&quot;
+             [class.fade]&#x3D;&quot;animation&quot;
+             style&#x3D;&quot;display: block&quot;
+             role&#x3D;&quot;popover&quot;&gt;
+            &lt;div [hidden]&#x3D;&quot;!closeOnMouseOutside&quot; class&#x3D;&quot;virtual-area&quot;&gt;&lt;/div&gt;
+            &lt;div class&#x3D;&quot;arrow&quot;&gt;&lt;/div&gt;
+            &lt;h3 class&#x3D;&quot;popover-title&quot; [hidden]&#x3D;&quot;!title&quot;&gt;{{ title }}&lt;/h3&gt;
+            &lt;div class&#x3D;&quot;popover-content popover-image-content &quot;&gt;
+                &lt;div class&#x3D;&quot;popover-image-left col-xs-4&quot;&gt;
+                    &lt;img src&#x3D;&quot;{{image}}&quot;
+                         class&#x3D;&quot;img-popover-open &quot; alt&#x3D;&quot;image popover&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-xs-8 popover-image-right &quot;&gt;
+                    &lt;ng-content&gt;&lt;/ng-content&gt;
+                    {{ content }}
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &#x60;,
+    styles: [&#x60;
+        .popover .virtual-area {
+            height: 11px;
+            width: 100%;
+            position: absolute;
+        }
+
+        .popover.top .virtual-area {
+            bottom: -11px;
+        }
+
+        .popover.bottom .virtual-area {
+            top: -11px;
+        }
+
+        .popover.left .virtual-area {
+            right: -11px;
+        }
+
+        .popover.right .virtual-area {
+            left: -11px;
+        }
+
+        .img-popover-open {
+            width: 100%;
+            height: 100%;
+            padding-top: 15%;
+        }
+
+        .popover-image {
+            background-color: transparent !important;
+            border: 0px solid #cecece !important;
+        }
+
+        .popover-image-left {
+            padding: 0px;
+        }
+
+        .popover-image-right {
+            background: #fff;
+            border: 1.5px solid #dad8d8;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 2px 2px 10px #dad8d8;
+        }
+
+        .popover-image-right:before {
+            content: &quot;&quot;;
+            position: absolute;
+            top: 10%;
+            left: -27px;
+            width: 25px;
+            height: 25px;
+            border: 1.5px solid #dad8d8;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            border-radius: 25px;
+        }
+        .popover-image-right:after {
+            content: &quot;&quot;;
+            position: absolute;
+            top: 20%;
+            left: -40px;
+            width: 15px;
+            height: 15px;
+            border: 1.5px solid #dad8d8;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+        }
+        .popover-image-content {
+            padding: 0px !important;
+        }
+    &#x60;]
+})
+export class PopoverContent implements AfterViewInit, OnDestroy {
+
+    // @Input()
+    // hostElement: HTMLElement;
+    @Input() image: string;
+    @Input() autoposition &#x3D; false;
+    @Input() content: string;
+
+    @Input()
+    placement: &#x27;top&#x27; | &#x27;bottom&#x27; | &#x27;left&#x27; | &#x27;right&#x27; | &#x27;auto&#x27; | &#x27;auto top&#x27; | &#x27;auto bottom&#x27; | &#x27;auto left&#x27; | &#x27;auto right&#x27; &#x3D; &#x27;bottom&#x27;;
+
+    @Input() title: string;
+
+    @Input() animation &#x3D; true;
+
+    @Input() closeOnClickOutside &#x3D; false;
+
+    @Input() closeOnMouseOutside &#x3D; false;
+
+    // -------------------------------------------------------------------------
+    // Properties
+    // -------------------------------------------------------------------------
+
+    @ViewChild(&#x27;popoverDiv&#x27;)
+    popoverDiv: ElementRef;
+
+    popover: PopoverDirective;
+    onCloseFromOutside &#x3D; new EventEmitter();
+    top: number &#x3D; -10000;
+    left: number &#x3D; -10000;
+    topParam &#x3D; -10000;
+    leftParam &#x3D; -10000;
+    isIn &#x3D; false;
+    displayType &#x3D; &#x27;none&#x27;;
+    effectivePlacement: string;
+    thisMouseOver &#x3D; false;
+    isOpened &#x3D; false;
+// -------------------------------------------------------------------------
+    // Lifecycle callbacks
+    // -------------------------------------------------------------------------
+    listenClickFunc: any;
+    listenMouseFunc: any;
+    // -------------------------------------------------------------------------
+    // -------------------------------------------------------------------------
+    // Anonymous
+    // -------------------------------------------------------------------------
+    //
+    /**
+     * Closes dropdown if user clicks outside of this directive.
+     */
+    onDocumentMouseDown &#x3D; (event: any) &#x3D;&gt; {
+        const element &#x3D; this.element.nativeElement;
+        if (!element || !this.popover) {
+            return;
+        }
+        if (element.contains(event.target) || this.popover.getElement().contains(event.target)) {
+            return;
+        }
+        this.hide();
+        this.onCloseFromOutside.emit(undefined);
+    }
+    // Constructor
+    // -------------------------------------------------------------------------
+    constructor(protected element: ElementRef,
+                protected cdr: ChangeDetectorRef,
+                protected renderer: Renderer) {
+    }
+
+    ngAfterViewInit(): void {
+        if (this.closeOnClickOutside) {
+            this.listenClickFunc &#x3D; this.renderer.listenGlobal(&#x27;document&#x27;, &#x27;mousedown&#x27;, (event: any) &#x3D;&gt; this.onDocumentMouseDown(event));
+        }
+        if (this.closeOnMouseOutside) {
+            this.listenMouseFunc &#x3D; this.renderer.listenGlobal(&#x27;document&#x27;, &#x27;mouseover&#x27;, (event: any) &#x3D;&gt; this.onDocumentMouseDown(event));
+        }
+        this.show();
+        this.cdr.detectChanges();
+    }
+
+    ngOnDestroy() {
+        if (this.closeOnClickOutside) {
+            this.listenClickFunc();
+        }
+        if (this.closeOnMouseOutside) {
+            this.listenMouseFunc();
+        }
+    }
+
+    // -------------------------------------------------------------------------
+    // Public Methods
+    // -------------------------------------------------------------------------
+
+    show(): void {
+        if (!this.popover || !this.popover.getElement()) {
+            return;
+        }
+
+        const p &#x3D; this.positionElements(this.popover.getElement(), this.popoverDiv.nativeElement, this.placement);
+        this.displayType &#x3D; &#x27;block&#x27;;
+        this.top &#x3D; p.top;
+        this.left &#x3D; p.left;
+        this.isIn &#x3D; true;
+    }
+
+    hide(): void {
+        this.top &#x3D; -10000;
+        this.left &#x3D; -10000;
+        this.isIn &#x3D; true;
+        this.popover.hide();
+    }
+
+    hideFromPopover() {
+        this.top &#x3D; -10000;
+        this.left &#x3D; -10000;
+        this.isIn &#x3D; true;
+    }
+
+    // -------------------------------------------------------------------------
+    // Protected Methods
+    // -------------------------------------------------------------------------
+
+    protected positionElements(hostEl: HTMLElement, targetEl: HTMLElement,
+                               positionStr: string, appendToBody &#x3D; false): { top: number, left: number } {
+        let positionStrParts &#x3D; positionStr.split(&#x27;-&#x27;);
+        let pos0 &#x3D; positionStrParts[0];
+        let pos1 &#x3D; positionStrParts[1] || &#x27;center&#x27;;
+        let hostElPos &#x3D; appendToBody ? this.offset(hostEl) : this.position(hostEl);
+        let targetElWidth &#x3D; targetEl.offsetWidth;
+        let targetElHeight &#x3D; targetEl.offsetHeight;
+
+        this.effectivePlacement &#x3D; pos0 &#x3D; this.getEffectivePlacement(pos0, hostEl, targetEl);
+
+        let shiftWidth: any &#x3D; {
+            center: function (): number {
+                return hostElPos.left + hostElPos.width / 2 - targetElWidth / 2;
+            },
+            left: function (): number {
+                return hostElPos.left;
+            },
+            right: function (): number {
+                return hostElPos.left + hostElPos.width;
+            }
+        };
+
+        let shiftHeight: any &#x3D; {
+            center: function (): number {
+                return hostElPos.top + hostElPos.height / 2 - targetElHeight / 2;
+            },
+            top: function (): number {
+                return hostElPos.top;
+            },
+            bottom: function (): number {
+                return hostElPos.top + hostElPos.height;
+            }
+        };
+
+        let targetElPos: { top: number, left: number };
+        switch (pos0) {
+            case &#x27;right&#x27;:
+                targetElPos &#x3D; {
+                    top: shiftHeight[pos1](),
+                    left: shiftWidth[pos0]()
+                };
+                break;
+
+            case &#x27;left&#x27;:
+                targetElPos &#x3D; {
+                    top: shiftHeight[pos1](),
+                    left: hostElPos.left - targetElWidth
+                };
+                break;
+
+            case &#x27;bottom&#x27;:
+                targetElPos &#x3D; {
+                    top: shiftHeight[pos0](),
+                    left: shiftWidth[pos1]()
+                };
+                break;
+
+            default:
+                targetElPos &#x3D; {
+                    top: hostElPos.top - targetElHeight,
+                    left: shiftWidth[pos1]()
+                };
+                break;
+        }
+
+        return targetElPos;
+    }
+
+    protected position(nativeEl: HTMLElement): { width: number, height: number, top: number, left: number } {
+        let offsetParentBCR &#x3D; {top: 0, left: 0};
+        const elBCR &#x3D; this.offset(nativeEl);
+        const offsetParentEl &#x3D; this.parentOffsetEl(nativeEl);
+        if (offsetParentEl !&#x3D;&#x3D; window.document) {
+            offsetParentBCR &#x3D; this.offset(offsetParentEl);
+            offsetParentBCR.top +&#x3D; offsetParentEl.clientTop - offsetParentEl.scrollTop;
+            offsetParentBCR.left +&#x3D; offsetParentEl.clientLeft - offsetParentEl.scrollLeft;
+        }
+
+        const boundingClientRect &#x3D; nativeEl.getBoundingClientRect();
+        return {
+            width: boundingClientRect.width || nativeEl.offsetWidth,
+            height: boundingClientRect.height || nativeEl.offsetHeight,
+            top: elBCR.top - offsetParentBCR.top,
+            left: elBCR.left - offsetParentBCR.left
+        };
+    }
+
+    protected offset(nativeEl: any): { width: number, height: number, top: number, left: number } {
+        const boundingClientRect &#x3D; nativeEl.getBoundingClientRect();
+        return {
+            width: boundingClientRect.width || nativeEl.offsetWidth,
+            height: boundingClientRect.height || nativeEl.offsetHeight,
+            top: boundingClientRect.top + (window.pageYOffset || window.document.documentElement.scrollTop),
+            left: boundingClientRect.left + (window.pageXOffset || window.document.documentElement.scrollLeft)
+        };
+    }
+
+    protected getStyle(nativeEl: HTMLElement, cssProp: string): string {
+        if ((nativeEl as any).currentStyle) {
+            return (nativeEl as any).currentStyle[cssProp];
+        }
+
+        if (window.getComputedStyle) {
+            return (window.getComputedStyle as any)(nativeEl)[cssProp];
+        }
+        // finally try and get inline style
+        return (nativeEl.style as any)[cssProp];
+    }
+
+    protected isStaticPositioned(nativeEl: HTMLElement): boolean {
+        return (this.getStyle(nativeEl, &#x27;position&#x27;) || &#x27;static&#x27; ) &#x3D;&#x3D;&#x3D; &#x27;static&#x27;;
+    }
+
+    protected parentOffsetEl(nativeEl: HTMLElement): any {
+        let offsetParent: any &#x3D; nativeEl.offsetParent || window.document;
+        while (offsetParent &amp;&amp; offsetParent !&#x3D;&#x3D; window.document &amp;&amp; this.isStaticPositioned(offsetParent)) {
+            offsetParent &#x3D; offsetParent.offsetParent;
+        }
+        return offsetParent || window.document;
+    }
+
+    protected getEffectivePlacement(placement: string, hostElement: HTMLElement, targetElement: HTMLElement): string {
+        const placementParts &#x3D; placement.split(&#x27; &#x27;);
+        if (placementParts[0] !&#x3D;&#x3D; &#x27;auto&#x27;) {
+            return placement;
+        }
+
+        const hostElBoundingRect &#x3D; hostElement.getBoundingClientRect();
+
+        const desiredPlacement &#x3D; placementParts[1] || &#x27;bottom&#x27;;
+
+        if (desiredPlacement &#x3D;&#x3D;&#x3D; &#x27;top&#x27; &amp;&amp; hostElBoundingRect.top - targetElement.offsetHeight &lt; 0) {
+            return &#x27;bottom&#x27;;
+        }
+        if (desiredPlacement &#x3D;&#x3D;&#x3D; &#x27;bottom&#x27; &amp;&amp; hostElBoundingRect.bottom + targetElement.offsetHeight &gt; window.innerHeight) {
+            return &#x27;top&#x27;;
+        }
+        if (desiredPlacement &#x3D;&#x3D;&#x3D; &#x27;left&#x27; &amp;&amp; hostElBoundingRect.left - targetElement.offsetWidth &lt; 0) {
+            return &#x27;right&#x27;;
+        }
+        if (desiredPlacement &#x3D;&#x3D;&#x3D; &#x27;right&#x27; &amp;&amp; hostElBoundingRect.right + targetElement.offsetWidth &gt; window.innerWidth) {
+            return &#x27;left&#x27;;
+        }
+
+        return desiredPlacement;
+    }
+}
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade" id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div #popoverDiv class="popover {{ effectivePlacement }} popover-image"     [style.top]="top + \'px\'"     [style.left]="left + \'px\'"     [class.in]="isIn"     [class.fade]="animation"     style="display: block"     role="popover">    <div [hidden]="!closeOnMouseOutside" class="virtual-area"></div>    <div class="arrow"></div>    <h3 class="popover-title" [hidden]="!title">{{ title }}</h3>    <div class="popover-content popover-image-content ">        <div class="popover-image-left col-xs-4">            <img src="{{image}}"                 class="img-popover-open " alt="image popover">        </div>        <div class="col-xs-8 popover-image-right ">            <ng-content></ng-content>            {{ content }}        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app'},{'name': 'NgxPopoverImageComponent', 'selector': 'app-ngx-popover-image'},{'name': 'PopoverContent', 'selector': 'popover-content'}];
+    var DIRECTIVES = [{'name': 'PopoverDirective', 'selector': '[popoverImage]'}];
+    var ACTUAL_COMPONENT = {'name': 'PopoverContent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>
