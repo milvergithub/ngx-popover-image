@@ -4,7 +4,6 @@ import {
     Component,
     ElementRef,
     EventEmitter,
-    HostListener,
     Input,
     OnDestroy,
     Renderer,
@@ -159,44 +158,6 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     // Anonymous
     // -------------------------------------------------------------------------
     //
-    @HostListener('window:click', ['$event'])
-    openPopoverClickEvent($event) {
-        if (this.autoposition && !this.thisMouseOver && !this.isOpened) {
-            this.topParam = $event.clientY;
-            this.leftParam = $event.clientX;
-            this.displayType = 'none';
-        }
-    }
-    @HostListener('mouseover')
-    onMouseOver() {
-        this.thisMouseOver = true;
-    }
-
-    @HostListener('mouseout')
-    onMouseOut() {
-        this.thisMouseOver = false;
-    }
-
-    showPopover() {
-        console.log('LOG', this.topParam, this.leftParam);
-        const vm = this;
-        setTimeout(function () {
-            vm.displayType = 'block';
-            vm.isIn = true;
-            vm.isOpened = true;
-        }, 200);
-        vm.top = this.topParam;
-        vm.left = this.leftParam;
-    }
-
-    closePopover() {
-        this.top = -10000;
-        this.left = -10000;
-        this.displayType = 'none';
-        this.isIn = false;
-        this.isOpened = false;
-    }
-
     /**
      * Closes dropdown if user clicks outside of this directive.
      */
