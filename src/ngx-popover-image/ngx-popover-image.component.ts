@@ -1,5 +1,4 @@
-import {Component, HostListener, Input, OnDestroy, OnInit} from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {NgxPopoverImageService} from './ngx-popover-image.service';
 
 @Component({
@@ -8,20 +7,9 @@ import {NgxPopoverImageService} from './ngx-popover-image.service';
   styleUrls: ['./ngx-popover-image.component.css'],
   providers: [
     NgxPopoverImageService
-  ],
-  animations: [
-    trigger('popoverImageAnimation', [
-      state('true', style({
-        transform: 'scale(0.8)',
-      })),
-      state('false', style({
-        transform: 'scale(1.0)',
-      })),
-      transition('* => *', animate('200ms'))
-    ])
   ]
 })
-export class NgxPopoverImageComponent implements OnInit, OnDestroy {
+export class NgxPopoverImageComponent implements OnInit {
 
   @Input() modal = false;
   @Input() image: string;
@@ -92,6 +80,4 @@ export class NgxPopoverImageComponent implements OnInit, OnDestroy {
     this.isOpened = false;
   }
 
-    ngOnDestroy(): void {
-    }
 }
