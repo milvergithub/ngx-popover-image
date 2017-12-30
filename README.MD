@@ -71,7 +71,9 @@ Once your library is imported, you can use its components, directives and pipes 
         <button class="btn btn-primary" (click)="popoverImage.closePopover()">close</button>
     </app-ngx-popover-image>
 ```
-
+### Options
+* image: source image url
+* modal: default value **false**, if is **true** display mode modal block background.
 ## Development
 
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
