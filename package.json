@@ -1,6 +1,6 @@
 {
   "name": "ngx-popover-image",
-  "version": "0.1.0",
+  "version": "0.1.23",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -23,7 +23,13 @@
     "email": "mfflowg@gmail.com"
   },
   "keywords": [
-    "angular",
+    "popover",
+    "angular popover",
+    "angular 4 popover",
+    "angular bootstrap",
+    "angular popover bootstrap",
+    "ng popover",
+    "popover angular",
     "angular 4 popover",
     "angular 4 popover image"
   ],
