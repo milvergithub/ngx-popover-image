@@ -27,26 +27,7 @@ import {PopoverLucyModule} from 'ngx-popover-image';
 
 @Component({
     selector: 'app',
-    template: `
-        <div class="container container-fluid">
-            <br><br><br><br><br>
-            <button (click)="evento()" class="btn btn-sm btn-success">open click</button>
-            <button [ngxPopoverImage]="popoverImage" class="btn btn-sm btn-success">open hover</button>
-        </div>
-        <app-ngx-popover-image #popoverImage
-                               [image]="image"
-                               [modal]="true">
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b>
-            <span style="color: #C21F39">A aliquam autem</span>
-            <span style="color: #00b3ee">beatae commodi</span>
-            labore magnam magni mollitia natus rem saepe?
-            <b><i><span style="color: #ffc520">Popover With</span></i></b>
-            <small>Consequuntur cum deleniti deserunt earum error nesciunt quae vel vitae.</small>
-            .
-            Click outside of this popover and it will be dismissed automatically.
-            <button class="btn btn-primary" (click)="popoverImage.closePopover()">close</button>
-        </app-ngx-popover-image>
-    `
+    templateUrl: 'app.component.html'
 })
 class AppComponent {
 
@@ -73,22 +54,22 @@ Once your library is imported, you can use its components, directives and pipes 
 
 ```xml
 <!-- You can now use your library component in app.component.html -->
-<button (click)="evento()" class="btn btn-sm btn-success">open click</button>
-            <button [ngxPopoverImage]="popoverImage" class="btn btn-sm btn-success">open hover</button>
-        </div>
-        <app-ngx-popover-image #popoverImage
-                               [image]="image"
-                               [modal]="true">
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b>
-            <span style="color: #C21F39">A aliquam autem</span>
-            <span style="color: #00b3ee">beatae commodi</span>
-            labore magnam magni mollitia natus rem saepe?
-            <b><i><span style="color: #ffc520">Popover With</span></i></b>
-            <small>Consequuntur cum deleniti deserunt earum error nesciunt quae vel vitae.</small>
-            .
-            Click outside of this popover and it will be dismissed automatically.
-            <button class="btn btn-primary" (click)="popoverImage.closePopover()">close</button>
-        </app-ngx-popover-image>
+    <button (click)="evento()" class="btn btn-sm btn-success">open click</button>
+    <button [ngxPopoverImage]="popoverImage" class="btn btn-sm btn-success">open hover</button>
+    </div>
+    <app-ngx-popover-image #popoverImage
+                           [image]="image"
+                           [modal]="true">
+        <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b>
+        <span style="color: #C21F39">A aliquam autem</span>
+        <span style="color: #00b3ee">beatae commodi</span>
+        labore magnam magni mollitia natus rem saepe?
+        <b><i><span style="color: #ffc520">Popover With</span></i></b>
+        <small>Consequuntur cum deleniti deserunt earum error nesciunt quae vel vitae.</small>
+        .
+        Click outside of this popover and it will be dismissed automatically.
+        <button class="btn btn-primary" (click)="popoverImage.closePopover()">close</button>
+    </app-ngx-popover-image>
 ```
 
 ## Development
