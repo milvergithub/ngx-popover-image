@@ -1,25 +1,28 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {NgxPopoverImageService} from './ngx-popover-image.service';
+import {NgxPopoverPosition} from './ngx-popover-position';
 
 @Component({
-  selector: 'app-ngx-popover-image',
-  templateUrl: './ngx-popover-image.component.html',
-  styleUrls: ['./ngx-popover-image.component.css'],
-  providers: [
-    NgxPopoverImageService
-  ]
+    selector: 'app-ngx-popover-image',
+    templateUrl: './ngx-popover-image.component.html',
+    styleUrls: ['./ngx-popover-image.component.css'],
+    providers: [
+        NgxPopoverImageService
+    ]
 })
 export class NgxPopoverImageComponent implements OnInit {
 
-  @Input() modal = false;
-  @Input() image: string;
-  protected displayPopover = 'none';
-  protected isOpened = false;
-  protected beforeIsOpened = false;
-  @Input() shouldToggle = false;
-  positionTop = '100px';
-  positionLeft = '100px';
-  protected insedeContent = false;
+    @Input() modal = false;
+    @Input() image: string;
+    @Input() closeOnMouseOutside = true;
+    protected displayPopover = 'none';
+    protected isOpened = false;
+    protected beforeIsOpened = false;
+    @Input() shouldToggle = false;
+    positionTop = '100px';
+    positionLeft = '100px';
+    public insedeContent = false;
+    public closePublic = false;
 
   constructor(private popoverImageService: NgxPopoverImageService) {
   }
@@ -40,8 +43,7 @@ export class NgxPopoverImageComponent implements OnInit {
   @HostListener('window:click', ['$event'])
   openPopoverClickEvent($event) {
     if ((!this.isOpened) && (this.insedeContent === false)) {
-      this.positionLeft = 200 + $event.clientX + 'px';
-      this.positionTop = $event.clientY - 100 + 'px';
+      this.popoverImageService.setPopoverPosition(new NgxPopoverPosition(200 + $event.clientX + 'px', $event.clientY - 100 + 'px'));
       if (this.beforeIsOpened) {
         this.showPopover();
       }
@@ -67,6 +69,8 @@ export class NgxPopoverImageComponent implements OnInit {
   }
 
   private showPopover(): void {
+    this.positionLeft = this.popoverImageService.getPopoverPosition().positionLeft;
+    this.positionTop = this.popoverImageService.getPopoverPosition().positionTop;
     this.shouldToggle = !this.shouldToggle;
     this.displayPopover = 'block';
     this.isOpened = true;
@@ -79,5 +83,16 @@ export class NgxPopoverImageComponent implements OnInit {
     this.shouldToggle = !this.shouldToggle;
     this.isOpened = false;
   }
+
+    public show(position: NgxPopoverPosition): void {
+        this.popoverImageService.setPopoverPosition(position);
+        this.showPopover();
+    }
+
+    public hide(): void {
+        if (this.closePublic) {
+            this.hidePopover();
+        }
+    }
 
 }

@@ -1,28 +1,25 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {PopoverContent} from './PopoverContent';
-import {PopoverDirective} from './popover';
 import {NgxPopoverImageComponent} from './ngx-popover-image/ngx-popover-image.component';
 import {NgxPopoverImageService} from './ngx-popover-image/ngx-popover-image.service';
+import {NgxPopoverImageDirective} from './ngx-popover-image/ngx-popover-image';
 
-export * from './PopoverContent';
-export * from './popover';
 export * from './ngx-popover-image/ngx-popover-image.component'
 export * from './ngx-popover-image/ngx-popover-image.service'
+export * from './ngx-popover-image/ngx-popover-image'
+export * from './ngx-popover-image/ngx-popover-position'
 
 @NgModule({
     imports: [
         CommonModule
     ],
     declarations: [
-        PopoverContent,
-        PopoverDirective,
-        NgxPopoverImageComponent
+        NgxPopoverImageComponent,
+        NgxPopoverImageDirective
     ],
     exports: [
-        PopoverContent,
-        PopoverDirective,
-        NgxPopoverImageComponent
+        NgxPopoverImageComponent,
+        NgxPopoverImageDirective,
     ]
 })
 export class PopoverLucyModule {
