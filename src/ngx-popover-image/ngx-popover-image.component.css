@@ -26,17 +26,17 @@
   padding: 10px;
 }
 
-.popover-image-left {
+.popover-image-image {
   max-width: 0%;
   float: left;
 }
 
-.popover-image-right {
+.popover-image-body {
   max-width: 100%;
   float: left;
 }
 
-.popover-image-body:before {
+.popover-image-bubble:before {
   content: "";
   position: absolute;
   top: 10%;
@@ -50,7 +50,7 @@
   border-radius: 25px;
 }
 
-.popover-image-body:after {
+.popover-image-bubble:after {
   content: "";
   position: absolute;
   top: 20%;

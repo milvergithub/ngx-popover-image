@@ -13,10 +13,16 @@ import {PopoverLucyModule} from 'ngx-popover-image';
         <div class="container container-fluid">
             <br><br><br><br><br>
             <button (click)="evento()" class="btn btn-sm btn-success">open click</button>
-            <button [ngxPopoverImage]="popoverImage" class="btn btn-sm btn-success">open hover</button>
+            <button [ngxPopoverImage]="popoverImage"
+                    [triggerEvent]="'hover'"
+                    class="btn btn-sm btn-success">open hover</button>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <button (click)="evento()" class="btn btn-sm btn-success">open click</button>
         </div>
         <app-ngx-popover-image #popoverImage
-                               [image]="image"
+                               [bubble]="false"
+                               [options]="defaultOptions"
                                [modal]="true">
             <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b>
             <span style="color: #C21F39">A aliquam autem</span>
@@ -34,6 +40,13 @@ class AppComponent {
 
     @ViewChild('popoverImage') popoverImage: NgxPopoverImageComponent;
     image = 'http://reneemullingslewis.com/wp-content/uploads/2014/08/woman-smiling.png';
+    defaultOptions = <NgxPopoverImageOptions> {
+        unit: 'px',
+        afterPositionLeft: 200,
+        afterPositionTop: 100,
+        staticPositionLeft: true,
+        staticValueLeft: '15%',
+    };
     constructor() {
     }
 

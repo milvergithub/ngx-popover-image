@@ -10,9 +10,9 @@ import {NgxPopoverImageService} from './ngx-popover-image.service';
 })
 export class NgxPopoverImageDirective {
 
-    protected ngxPopoverImage = NgxPopoverImageComponent;
     protected popover: ComponentRef<NgxPopoverImageComponent>;
     protected visible: boolean;
+    @Input() triggerEvent = 'click';
     @Input('ngxPopoverImage') content: NgxPopoverImageComponent;
 
     constructor(protected viewContainerRef: ViewContainerRef,
@@ -22,12 +22,17 @@ export class NgxPopoverImageDirective {
 
     @HostListener('click')
     showOrHideOnClick(): void {
-        this.content.openPopover();
-        console.log('element', this.getElement());
+        if (this.triggerEvent === 'hover') {return; }
+        this.displayPopoverDirective();
     }
 
     @HostListener('mouseover')
     showOnHover(): void {
+        if (this.triggerEvent === 'click') {return; }
+        this.displayPopoverDirective();
+    }
+
+    private displayPopoverDirective() {
         const pos = this.positionElements(this.getElement());
         this.content.show(new NgxPopoverPosition(pos.left + pos.width - 1 + 'px', pos.top - 100 + 'px'));
     }
