@@ -1,0 +1,136 @@
+<div class="container container-fluid">
+    <div class="card">
+        <div class="card-header">
+            Options
+        </div>
+        <div class="card-block">
+            <div class="form-group">
+            </div>
+            <div class="form-group">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" [(ngModel)]="isModal" class="form-check-input" id="exampleModal">
+                    <label class="form-check-label" for="exampleModal">modal</label>
+                </div>
+            </div>
+            <div class="checkbox checkbox-primary">
+                <input type="checkbox" [(ngModel)]="bubble" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Bubble</label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="radio1" id="radio1" value="option1">
+                <label for="radio1">
+                    Small
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="radio1" id="radio2" value="option2">
+                <label for="radio2">
+                    Small
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>hover</th>
+                <th>click</th>
+                <th>header</th>
+                <th>Header</th>
+                <th>Header</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <button [ngxPopoverImage]="popoverImage"
+                            [triggerEvent]="'hover'"
+                            [closeMouseOut]="false"
+                            class="btn btn-sm btn-success"><span class="fa fa-comment-o"></span></button>
+                </td>
+                <td>
+                    <button (click)="openPopoverImage()" class="btn btn-sm btn-success"><span class="fa fa-flickr"></span></button>
+                <td>ipsum</td>
+                <td>dolor</td>
+                <td>sit</td>
+            </tr>
+            <tr>
+                <td>
+                    <button [ngxPopoverImage]="popoverImage"
+                            [triggerEvent]="'hover'"
+                            class="btn btn-sm btn-success">hover</button>
+                </td>
+                <td>
+                    <button (click)="openPopoverImage()" class="btn btn-sm btn-success"><span class="fa fa-flickr"></span></button>
+                </td>
+                <td>consectetur</td>
+                <td>adipiscing</td>
+                <td>elit</td>
+            </tr>
+            <tr>
+                <td>
+                    <button [ngxPopoverImage]="popoverImage"
+                            [triggerEvent]="'hover'"
+                            class="btn btn-sm btn-success">hover</button>
+                </td>
+                <td>
+                    <button (click)="openPopoverImage()" class="btn btn-sm btn-success"><span class="fa fa-flickr"></span></button>
+                </td>
+                <td>nec</td>
+                <td>odio</td>
+                <td>Praesent</td>
+            </tr>
+            <tr>
+                <td>
+                    <button [ngxPopoverImage]="popoverImage"
+                            [triggerEvent]="'hover'"
+                            class="btn btn-sm btn-success">hover</button>
+                </td>
+                <td>
+                    <button (click)="openPopoverImage()" class="btn btn-sm btn-success"><span class="fa fa-flickr"></span></button>
+                </td>
+                <td>Sed</td>
+                <td>cursus</td>
+                <td>ante</td>
+            </tr>
+            <tr>
+                <td>
+                    <button [ngxPopoverImage]="popoverImage"
+                            [triggerEvent]="'hover'"
+                            class="btn btn-sm btn-success">hover</button>
+                </td>
+                <td>
+                    <button (click)="openPopoverImage()" class="btn btn-sm btn-success"><span class="fa fa-flickr"></span></button>
+                </td>
+                <td>diam</td>
+                <td>Sed</td>
+                <td>nisi</td>
+            </tr>
+            <tr>
+                <td>
+                    <button [ngxPopoverImage]="popoverImage"
+                            [triggerEvent]="'hover'"
+                            class="btn btn-sm btn-success">hover</button>
+                </td>
+                <td>Nulla</td>
+                <td>quis</td>
+                <td>sem</td>
+                <td>at</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-ngx-popover-image #popoverImage
+                       [bubble]="bubble"
+                       [placement]="'right'"
+                       [options]="defaultOptions"
+                       [modal]="isModal">
+    <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b>
+    <span style="color: #C21F39">A aliquam autem</span>
+    <span style="color: #00b3ee">beatae commodi</span>
+    .
+    Click outside of this popover and it will be dismissed automatically.
+    <button class="btn btn-sm btn-primary" (click)="popoverImage.closePopover()">close</button>
+</app-ngx-popover-image>

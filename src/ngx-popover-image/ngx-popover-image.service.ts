@@ -6,26 +6,20 @@ import {NgxPopoverPosition} from './ngx-popover-position';
 @Injectable()
 export class NgxPopoverImageService {
 
-    private popoverImageManager = new BehaviorSubject<boolean>(false);
-
-    private popoverClose = new BehaviorSubject<boolean>(false);
+    private popoverImageStatus = new BehaviorSubject<string>('hide');
 
     private popoverPosition = new BehaviorSubject<NgxPopoverPosition>(new NgxPopoverPosition('-1000', '-1000'));
 
     public getPopoverImageSubscription(): Observable<any> {
-        return this.popoverImageManager.asObservable();
+        return this.popoverImageStatus.asObservable();
     }
 
-    public sePopoverImageManger(open: boolean): void {
-        this.popoverImageManager.next(open);
+    public sePopoverImageManger(open: string): void {
+        this.popoverImageStatus.next(open);
     }
 
-    public getPopoverCloseSubscription(): Observable<any> {
-        return this.popoverClose.asObservable();
-    }
-
-    public setPopoverClose(close: boolean): void {
-        this.popoverClose.next(close);
+    public getPopoverImageStatus(): string {
+        return this.popoverImageStatus.getValue();
     }
 
     public getPopoverPosition(): NgxPopoverPosition {

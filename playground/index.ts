@@ -3,38 +3,15 @@
  */
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule, ViewChild} from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 import {Component} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {PopoverLucyModule} from 'ngx-popover-image';
 
 @Component({
     selector: 'app',
-    template: `
-        <div class="container container-fluid">
-            <br><br><br><br><br>
-            <button (click)="evento()" class="btn btn-sm btn-success">open click</button>
-            <button [ngxPopoverImage]="popoverImage"
-                    [triggerEvent]="'hover'"
-                    class="btn btn-sm btn-success">open hover</button>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <button (click)="evento()" class="btn btn-sm btn-success">open click</button>
-        </div>
-        <app-ngx-popover-image #popoverImage
-                               [bubble]="false"
-                               [options]="defaultOptions"
-                               [modal]="true">
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b>
-            <span style="color: #C21F39">A aliquam autem</span>
-            <span style="color: #00b3ee">beatae commodi</span>
-            labore magnam magni mollitia natus rem saepe?
-            <b><i><span style="color: #ffc520">Popover With</span></i></b>
-            <small>Consequuntur cum deleniti deserunt earum error nesciunt quae vel vitae.</small>
-            .
-            Click outside of this popover and it will be dismissed automatically.
-            <button class="btn btn-primary" (click)="popoverImage.closePopover()">close</button>
-        </app-ngx-popover-image>
-    `
+    templateUrl: 'home/home.component.html',
+    styleUrls: ['home/home.component.css']
 })
 class AppComponent {
 
@@ -45,12 +22,12 @@ class AppComponent {
         afterPositionLeft: 200,
         afterPositionTop: 100,
         staticPositionLeft: true,
-        staticValueLeft: '15%',
+        staticValueLeft: '40%',
     };
     constructor() {
     }
 
-    evento() {
+    openPopoverImage() {
         this.popoverImage.openPopover();
     }
 }
@@ -58,7 +35,7 @@ class AppComponent {
 @NgModule({
     bootstrap: [AppComponent],
     declarations: [AppComponent],
-    imports: [BrowserModule, PopoverLucyModule]
+    imports: [BrowserModule, FormsModule, PopoverLucyModule]
 })
 class AppModule {
 }

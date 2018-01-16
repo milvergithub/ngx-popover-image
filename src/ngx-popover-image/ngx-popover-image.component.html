@@ -1,5 +1,6 @@
-<div [ngClass]="{'popover-image-modal': modal && isOpened && !(isDirective)}">
+<div [ngClass]="{'popover-image-modal': modal && isOpenedPopover() && !(isDirective)}">
     <div class="popover-image"
+         #popoverDiv
          [style.display]="displayPopover"
          [style.top]="positionTop"
          [style.left]="positionLeft">
@@ -8,7 +9,7 @@
                  *ngIf="image != undefined"
                  class="img-popover-open">
         </div>
-        <div class="popover-image-body" [ngClass]="{'popover-image-bubble': bubble}">
+        <div class="popover-image-body" [ngClass]="{'popover-image-bubble': bubble, 'popover-image-arrow-left' : !bubble}">
             <ng-content></ng-content>
         </div>
     </div>

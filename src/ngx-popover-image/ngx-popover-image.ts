@@ -1,6 +1,5 @@
 import {ComponentFactoryResolver, ComponentRef, Directive, HostListener, Input, ViewContainerRef} from '@angular/core';
 import {NgxPopoverImageComponent} from './ngx-popover-image.component';
-import {NgxPopoverPosition} from './ngx-popover-position';
 import {NgxPopoverImageService} from './ngx-popover-image.service';
 
 @Directive({
@@ -11,7 +10,7 @@ import {NgxPopoverImageService} from './ngx-popover-image.service';
 export class NgxPopoverImageDirective {
 
     protected popover: ComponentRef<NgxPopoverImageComponent>;
-    protected visible: boolean;
+    @Input() closeMouseOut = true;
     @Input() triggerEvent = 'click';
     @Input('ngxPopoverImage') content: NgxPopoverImageComponent;
 
@@ -22,45 +21,36 @@ export class NgxPopoverImageDirective {
 
     @HostListener('click')
     showOrHideOnClick(): void {
-        if (this.triggerEvent === 'hover') {return; }
+        if (this.triggerEvent === 'hover') {
+            return;
+        }
         this.displayPopoverDirective();
     }
 
-    @HostListener('mouseover')
+    @HostListener('focusin')
+    @HostListener('mouseenter')
     showOnHover(): void {
-        if (this.triggerEvent === 'click') {return; }
+        if (this.triggerEvent === 'click') {
+            return;
+        }
         this.displayPopoverDirective();
     }
 
     private displayPopoverDirective() {
-        const pos = this.positionElements(this.getElement());
-        this.content.show(new NgxPopoverPosition(pos.left + pos.width - 1 + 'px', pos.top - 100 + 'px'));
+        this.content.popover = this;
+        this.content.show();
     }
 
-    @HostListener('mouseout')
+    @HostListener('focusout')
+    @HostListener('mouseleave')
     hideOnHover(): void {
-        const vm = this;
-        this.content.closePublic = true;
-        setTimeout(function () {
-            vm.content.hide();
-        }, 600);
+        if (!this.closeMouseOut) {
+            return;
+        }
+        this.content.hide();
     }
 
     getElement() {
         return this.viewContainerRef.element.nativeElement;
-    }
-
-    protected positionElements(hostEl: HTMLElement): { top: number, left: number, width: number, height: number } {
-        return this.offset(hostEl);
-    }
-
-    protected offset(nativeEl: any): { width: number, height: number, top: number, left: number } {
-        const boundingClientRect = nativeEl.getBoundingClientRect();
-        return {
-            width: boundingClientRect.width || nativeEl.offsetWidth,
-            height: boundingClientRect.height || nativeEl.offsetHeight,
-            top: boundingClientRect.top + (window.pageYOffset || window.document.documentElement.scrollTop),
-            left: boundingClientRect.left + (window.pageXOffset || window.document.documentElement.scrollLeft)
-        };
     }
 }
