@@ -1,0 +1,17 @@
+.popover .virtual-area {
+    height: 11px;
+    width: 100%;
+    position: absolute;
+}
+.popover.top .virtual-area {
+    bottom: -11px;
+}
+.popover.bottom .virtual-area {
+    top: -11px;
+}
+.popover.left .virtual-area {
+    right: -11px;
+}
+.popover.right .virtual-area {
+    left: -11px;
+}

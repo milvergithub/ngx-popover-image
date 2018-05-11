@@ -64,7 +64,7 @@ Once your library is imported, you can use its components, directives and pipes 
         <span style="color: #C21F39">A aliquam autem</span>
         <span style="color: #00b3ee">beatae commodi</span>
         labore magnam magni mollitia natus rem saepe?
-        <b><i><span style="color: #ffc520">Popover With</span></i></b>
+        <b><i><span style="color: #ffc520">PopoverDirective With</span></i></b>
         <small>Consequuntur cum deleniti deserunt earum error nesciunt quae vel vitae.</small>
         .
         Click outside of this popover and it will be dismissed automatically.
