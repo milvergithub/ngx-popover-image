@@ -1,4 +1,13 @@
-# ngx-popover-image
+## Description
+The library it's funcional with bootstrap 3 and angular 4 5 and 6.
+
+## Demo.
+<https://angular-popover-image.stackblitz.io>
+
+
+<https://stackblitz.com/edit/angular-popover-image>
+
+
 ![angular 4 popover-image](https://raw.githubusercontent.com/milvergithub/ngx-popover-image/master/resource/demo.png)
 ## Installation
 
@@ -10,7 +19,7 @@ $ npm install ngx-popover-image --save
 
 ## Consuming your library
 
-Once you have published your library to npm, you can import your library in any Angular application by running:
+You can import your library in any Angular application by running:
 
 ```bash
 $ npm install ngx-popover-image
@@ -23,7 +32,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule, ViewChild} from '@angular/core';
 import {Component} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {PopoverLucyModule} from 'ngx-popover-image';
+import {NgxPopoverImageModule} from 'ngx-popover-image';
 
 @Component({
     selector: 'app',
@@ -31,20 +40,16 @@ import {PopoverLucyModule} from 'ngx-popover-image';
 })
 class AppComponent {
 
-    @ViewChild('popoverImage') popoverImage: NgxPopoverImageComponent;
-    image = 'http://reneemullingslewis.com/wp-content/uploads/2014/08/woman-smiling.png';
+    public imageUrl = 'image.svg';
+    image = 'https://www.completedietsolutions.org/Member/completedietsolutions/Images/woman-smiling-png-e1422243041656.png';
     constructor() {
-    }
-
-    evento() {
-        this.popoverImage.openPopover();
     }
 }
 
 @NgModule({
     bootstrap: [AppComponent],
     declarations: [AppComponent],
-    imports: [BrowserModule, PopoverLucyModule]
+    imports: [BrowserModule, NgxPopoverImageModule]
 })
 class AppModule {
 }
@@ -52,28 +57,27 @@ class AppModule {
 
 Once your library is imported, you can use its components, directives and pipes in your Angular application:
 
-```xml
-<!-- You can now use your library component in app.component.html -->
-    <button (click)="evento()" class="btn btn-sm btn-success">open click</button>
-    <button [ngxPopoverImage]="popoverImage" class="btn btn-sm btn-success">open hover</button>
-    </div>
-    <app-ngx-popover-image #popoverImage
-                           [image]="image"
-                           [modal]="true">
-        <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b>
-        <span style="color: #C21F39">A aliquam autem</span>
-        <span style="color: #00b3ee">beatae commodi</span>
-        labore magnam magni mollitia natus rem saepe?
-        <b><i><span style="color: #ffc520">PopoverDirective With</span></i></b>
-        <small>Consequuntur cum deleniti deserunt earum error nesciunt quae vel vitae.</small>
-        .
-        Click outside of this popover and it will be dismissed automatically.
-        <button class="btn btn-primary" (click)="popoverImage.closePopover()">close</button>
-    </app-ngx-popover-image>
+```html
+<ngx-popover-content #myPopover
+                 title="Popover title"
+                 placement="right"
+                 [animation]="true"
+                 [imageUrl]="imageUrl"
+                 [closeOnClickOutside]="false" >
+    <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
+    <b><i><span style="color: #ffc520">Popover With</span></i></b> <small>Html support</small>.
+    <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
+    <b><i><span style="color: #ffc520">Popover With</span></i></b> <small>Html support</small>.
+    <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
+    <b><i><span style="color: #ffc520">Popover With</span></i></b> <small>Html support</small>.
+    <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
+</ngx-popover-content>
+<br><br><br><br><br>
+<button [popoverImage]="myPopover" class="btn btn-danger">popover.</button>
 ```
 ### Options
 * image: source image url
-* modal: default value **false**, if is **true** display mode modal block background.
+* customClass: default value **''**
 ## Development
 
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:

@@ -15,6 +15,7 @@ import {NgxPopoverImageModule} from 'ngx-popover-image';
 })
 class AppComponent {
 
+    public imageUrl = 'image.svg';
     constructor() {
     }
 }

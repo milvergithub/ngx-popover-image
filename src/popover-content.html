@@ -1,6 +1,5 @@
 <div #popoverDiv class='popover {{ effectivePlacement }} {{customClass}}'
-     [style.top]='top'
-     [style.left]='left'
+     [ngStyle]="getStyles()"
      [class.in]='isIn'
      [class.fade]='animation'
      style='display: block'
@@ -8,6 +7,9 @@
     <div [hidden]='!closeOnMouseOutside' class='virtual-area'></div>
     <div class='arrow'></div>
     <h3 class='popover-title' [hidden]='!title'>{{ title }}</h3>
+    <div [ngClass]="imagePosition()" [ngStyle]="getStylesImage()" *ngIf="imageUrl">
+        <img [src]="imageUrl" class="ngx-image-content">
+    </div>
     <div class='popover-content'>
         <ng-content></ng-content>
         {{ content }}

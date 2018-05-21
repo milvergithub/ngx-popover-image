@@ -1,12 +1,16 @@
 <ngx-popover-content #myPopover
                  title="Popover title"
-                 placement="bottom"
+                 placement="right"
                  [animation]="true"
-                 [closeOnClickOutside]="true" >
+                 [imageUrl]="imageUrl"
+                 [closeOnClickOutside]="false" >
     <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
     <b><i><span style="color: #ffc520">Popover With</span></i></b> <small>Html support</small>.
     <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
     <b><i><span style="color: #ffc520">Popover With</span></i></b> <small>Html support</small>.
+    <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
+    <b><i><span style="color: #ffc520">Popover With</span></i></b> <small>Html support</small>.
+    <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>
 </ngx-popover-content>
 <br><br><br><br><br>
 <button [popoverImage]="myPopover" class="btn btn-danger">popover.</button>

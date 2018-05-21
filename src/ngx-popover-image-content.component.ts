@@ -14,6 +14,8 @@ export class NgxPopoverImageContentComponent implements AfterViewInit, OnDestroy
     // -------------------------------------------------------------------------
     @Input() customClass = '';
 
+    @Input() imageUrl: string;
+
     @Input() content: string;
 
     @Input()
@@ -26,7 +28,7 @@ export class NgxPopoverImageContentComponent implements AfterViewInit, OnDestroy
     animation = true;
 
     @Input()
-    closeOnClickOutside = false;
+    closeOnClickOutside = true;
 
     @Input()
     closeOnMouseOutside = false;
@@ -44,6 +46,7 @@ export class NgxPopoverImageContentComponent implements AfterViewInit, OnDestroy
     isIn = false;
     displayType = 'none';
     effectivePlacement: string;
+    unit = 'px';
 
     // -------------------------------------------------------------------------
     // Anonymous
@@ -81,6 +84,7 @@ export class NgxPopoverImageContentComponent implements AfterViewInit, OnDestroy
 
         this.show();
         this.cdr.detectChanges();
+        console.log(this.popoverDiv.nativeElement.getBoundingClientRect());
     }
 
     ngOnDestroy() {
@@ -100,8 +104,8 @@ export class NgxPopoverImageContentComponent implements AfterViewInit, OnDestroy
         this.positionElements(this.popover.getElement(), this.popoverDiv.nativeElement, this.placement, false);
         const pos = positioning.positionElements(this.popover.getElement(), this.popoverDiv.nativeElement, this.placement, false);
         this.displayType = 'block';
-        this.top = pos.top + 'px';
-        this.left = pos.left + 'px';
+        this.top = pos.top;
+        this.left = pos.left;
         this.isIn = true;
     }
 
@@ -116,6 +120,40 @@ export class NgxPopoverImageContentComponent implements AfterViewInit, OnDestroy
         this.top = -10000;
         this.left = -10000;
         this.isIn = true;
+    }
+
+    getStyles(): any {
+        return {
+            'top': this.top + 'px',
+            'left': this.left + 'px',
+        };
+    }
+
+    getStylesImage(): any {
+        const rect = this.popoverDiv.nativeElement.getBoundingClientRect();
+        let heigthImage = '200px';
+        if (rect.height < 200) {
+            heigthImage = rect.height + 'px';
+        }
+        if (this.imagePosition() === 'ngx-popover-image-right') {
+            return {
+                'width': heigthImage,
+                'height': heigthImage,
+                'right': '-' + heigthImage
+            };
+        }
+        return {
+            'width': heigthImage,
+            'height': heigthImage,
+            'left': '-' + heigthImage
+        };
+    }
+
+    imagePosition(): string {
+        if (this.getPlacementPosition(this.placement) === 'right') {
+            return 'ngx-popover-image-right';
+        }
+        return 'ngx-popover-image-left';
     }
 
     // -------------------------------------------------------------------------
@@ -204,5 +242,13 @@ export class NgxPopoverImageContentComponent implements AfterViewInit, OnDestroy
         }
 
         return desiredPlacement;
+    }
+
+    protected getPlacementPosition(placement: string): string {
+        const placementParts = placement.split(' ');
+        if (placementParts.length === 1) {
+            return placementParts[0];
+        }
+        return placementParts[1];
     }
 }
