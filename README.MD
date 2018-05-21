@@ -1,5 +1,5 @@
 ## Description
-The library it's funcional with bootstrap 3 and angular 4 5 and 6.
+The library it's compatible with bootstrap 3 and angular 4 and it's possible add a image as a help to message.
 
 ## Demo.
 <https://angular-popover-image.stackblitz.io>
